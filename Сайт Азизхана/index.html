@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Course List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      input[type="text"],
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background:#0056b3;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        background: #e2e2e2;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Course List</h1>
+      <form id="studentForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input
+          type="number"
+          id="courseNumber"
+          placeholder="Course Number"
+          required
+        />
+        <select id="courseName" required>
+          <optgroup label="DON`T CHOOSE IT, PLEASE">
+            <option>None</option>
+          </optgroup>
+          <optgroup label="Faculty of Engineering and Informatics">
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Cybersecurity and Ethical Hacking">
+              Cybersecurity and Ethical Hacking
+            </option>
+            <option value="Creative Industries Fundamentals">
+              Creative Industries Fundamentals
+            </option>
+            <option value="Data Analysis and Intelligent Systems">
+              Data Analysis and Intelligent Systems
+            </option>
+            <option value="Applied Mathematics and Informatics in Education">
+              Applied Mathematics and Informatics in Education
+            </option>
+            <option value="Artificial intelligence and robotics">
+              Artificial intelligence and Robotics
+            </option>
+            <option value="Management in Information Technologies">
+              Management in Information Technologies
+            </option>
+          </optgroup>
+          <optgroup label="Faculty of Economics and Management">
+            <option value="International Economics and Business">
+              International Economics and Business
+            </option>
+            <option value="International Finance and Auditing">
+              International Finance and Auditing
+            </option>
+            <option value="International Relations">
+              International Relations
+            </option>
+            <option value="Management">Management</option>
+          </optgroup>
+          <optgroup label="Faculty of Humanities">
+            <option value="Philology">Philology</option>
+            <option value="Linguistics">Linguistics</option>
+            <option value="Pedagogy">Pedagogy</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Journalism">Journalism</option>
+            <option value="Advertising and Public Relations">
+              Advertising and Public Relations
+            </option>
+            <option value="Law (International Law)">
+              Jurisprudence (International Law)
+            </option>
+          </optgroup>
+          <optgroup label="Faculty of Medicine">
+            <option value="Medicine">General Medicine</option>
+          </optgroup>
+          <optgroup label="Preparatory Course (yeah, it`s similar, problems?)">
+          <option value="">Preparatory Course</option>
+        </optgroup>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+      <ul id="studentList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
