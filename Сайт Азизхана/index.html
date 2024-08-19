@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Course List</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="PAPA_container">
+      <div class="container2">
+        <div class="edit">Добро пожаловать!</div>
+        <h1>
+          <div class="goo" contenteditable="true">
+            Этот сайт создан специально для того, чтобы вы могли познакомиться
+            со своими будущими одногруппниками ещё до начала учебного года.
+            Здесь вы можете оставить свои данные — имя, номер курса и его
+            название — и увидеть, кто еще будет учиться вместе с вами.
+          </div>
+        </h1>
+        <div class="edit2">
+          Заполните форму и узнайте, кто ваши будущие одногруппники!
+        </div>
+        <h1>
+          <div class="goo2" contenteditable="true">
+            Ваша информация появится в списке ниже, чтобы вы могли познакомиться
+            с теми, с кем проведете ближайшие годы учебы. Давайте начнем наше
+            знакомство прямо сейчас!
+          </div>
+        </h1>
+        <svg
+          style="visibility: hidden; position: absolute"
+          width="0"
+          height="0"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+        >
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                result="goo"
+              />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+     <div class="container">
+      <h2>Student Course List</h2>
+      <form id="studentForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="number" id="courseNumber" placeholder="Course Number" required />
+        <select id="courseName" required>
+          <optgroup label="DON`T CHOOSE IT, PLEASE">
+            <option>None</option>
+          </optgroup>
+          <optgroup label="Faculty of Engineering and Informatics">
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Cybersecurity and Ethical Hacking">Cybersecurity and Ethical Hacking</option>
+            <option value="Creative Industries Fundamentals">Creative Industries Fundamentals</option>
+            <option value="Data Analysis and Intelligent Systems">Data Analysis and Intelligent Systems</option>
+            <option value="Applied Mathematics and Informatics in Education">Applied Mathematics and Informatics in Education</option>
+            <option value="Artificial intelligence and robotics">Artificial intelligence and Robotics</option>
+            <option value="Management in Information Technologies">Management in Information Technologies</option>
+          </optgroup>
+          <optgroup label="Faculty of Economics and Management">
+            <option value="International Economics and Business">International Economics and Business</option>
+            <option value="International Finance and Auditing">International Finance and Auditing</option>
+            <option value="International Relations">International Relations</option>
+            <option value="Management">Management</option>
+          </optgroup>
+          <optgroup label="Faculty of Humanities">
+            <option value="Philology">Philology</option>
+            <option value="Linguistics">Linguistics</option>
+            <option value="Pedagogy">Pedagogy</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Journalism">Journalism</option>
+            <option value="Advertising and Public Relations">Advertising and Public Relations</option>
+            <option value="Law (International Law)">Jurisprudence (International Law)</option>
+          </optgroup>
+          <optgroup label="Faculty of Medicine">
+            <option value="Medicine">General Medicine</option>
+          </optgroup>
+          <optgroup label="Preparatory Course (yeah, it`s similar, problems?)">
+            <option value="">Preparatory Course</option>
+          </optgroup>
+        </select>
+        <input type="text" id="hobby" placeholder="Your Hobby or Interests" />
+        <button
+        class="button"
+        href="#"
+        style="--color: #1e9bff"
+        type="submit"
+      >
+        
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        
+      </button>
+      </form>
+      <ul id="studentList"></ul>
+    </div>
+    
+      <div class="container6">
+      <div class="container5">
+        <div class="edit3">
+          В дальнейшей части сайта будет информация о том, кто я такой, а также о моей первой цели, которая побудила меня на создание этого сайта.
+         </div>
+        <h4>
+          <div class="goo3" contenteditable="true">
+            Меня зовут Азизхан (можно и Азиз), хотел учится в АУЦА, но потерпел неудачу (ОРТ), недобрал большое кол-во баллов (10), но в этой неудаче я нашёл мотивацию!
+            Теперь любая трудность флешбэкает меня ко всем моим прошлым неудачам (включая нынешнюю), и как бы говорит: "Йоу, давай работай, иначе всё будет также, как и раньше", можно сказать что это травма... <br>(но я её так не называю!)
+           <br> Моя нынешняя маленькая цель, за первый курс, это получить 500 контактов. 
+            Честно говоря, этот сайт по большей мере предназначен для того, чтобы вы узнали чуть больше обо мне. Однако, это не значит что я не хочу узнать что-либо о вас, cнизу буду мои минимальные контакты, если есть желание ПИШИТЕ! (Ну а если нет, я в любом случае рано или поздно сам к вам подойду)
+          </div>
+        </h4>
+        </div>
+
+
+
+
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                result="goo"
+              />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      <div class="container7">
+        <div class="waviy">
+          <span style="--i:1">A</span>
+          <span style="--i:2">Z</span>
+          <span style="--i:3">I</span>
+          <span style="--i:4">Z</span>
+          <span style="--i:5">K</span>
+          <span style="--i:6">H</span>
+          <span style="--i:7">A</span>
+          <span style="--i:8">N</span>
+         </div>
+         <div class="waviy"> 
+          <span style="--i:1">S</span>
+          <span style="--i:2">O</span>
+          <span style="--i:3">C</span>
+          <span style="--i:4">I</span>
+          <span style="--i:5">A</span>
+          <span style="--i:6">L</span>
+          <span style="--i:7">S</span>
+        </div>
+
+
+        <ul>
+          <li><a href="https://www.instagram.com/azizhan228/"><i class="fa-brands fa-instagram instagram"></i></a></li>
+          <li><a href="https://wa.me/996702800063"><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
+          <li><a href="https://youtu.be/dQw4w9WgXcQ?si=wkIOTlD9bgZixgy2"><i class="fa-brands fa-twitter twitter"></i></a></li>
+      </ul>
+      </div>
+
+
+      <div class="container4">
+        <img src="./img/20240818_163844.jpg" alt="Normalino Stoiu">
+
+        <div class="word"></div>
+
+      </div>
+
+
+
+      <div class="gallery">
+        <div class="gallery__strip__wrapper">
+          <div class="gallery__strip one">
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Сердце секом.jpg" />
+              </div>
+              <div class="photo__name">Heart?</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Зеркало.jpg" />
+              </div>
+              <div class="photo__name">In front of mirror...</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Секом.jpg" />
+              </div>
+              <div class="photo__name">Secom</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Завищава.jpg" />
+              </div>
+              <div class="photo__name">Zavishava</div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__strip__wrapper">
+          <div class="gallery__strip two">
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/АЛА-Але.jpg" />
+              </div>
+              <div class="photo__name">Normal University?</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/БИСЕПС.jpg" />
+              </div>
+              <div class="photo__name">Byceps</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/СОЛНЦЕБИСЕПС.jpg" />
+              </div>
+              <div class="photo__name">Who's there?</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/толпа нг.jpg" />
+              </div>
+              <div class="photo__name">New Year</div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__strip__wrapper">
+          <div class="gallery__strip three">
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/толпа.jpg" />
+              </div>
+              <div class="photo__name">Tough party</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Лайк.jpg" />
+              </div>
+              <div class="photo__name">The Red Crescent Letter</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Красный.jpg" />
+              </div>
+              <div class="photo__name">I'm straight</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/ЧБ.jpg" />
+              </div>
+              <div class="photo__name">Hangover</div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__strip__wrapper">
+          <div class="gallery__strip four">
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Парни.jpg" />
+              </div>
+              <div class="photo__name">300 Black Men</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Чувству..jpg" />
+              </div>
+              <div class="photo__name">Disco</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Иисус.jpg" />
+              </div>
+              <div class="photo__name">Na Gore</div>
+            </div>
+            <div class="photo">
+              <div class="photo__image">
+                <img src="./img/Эстет.jpg" />
+              </div>
+              <div class="photo__name">Glass of empty</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
